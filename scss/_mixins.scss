@@ -1,0 +1,101 @@
+@import "vars";
+@mixin font-face($name, $file, $weight: 400, $style: normal) {
+    @font-face {
+        font-family: "#{$name}";
+        src: url('../fonts/#{$file}.ttf') format('ttf'),
+        url('../fonts/#{$file}.woff') format('woff');
+        font-weight: $weight;
+        font-style: $style;
+        font-display: swap;
+    }
+}
+
+@mixin scroll {
+    &::-webkit-scrollbar {
+        width: 6px;
+        height: 6px;
+    }
+    &::-webkit-scrollbar-track {
+        background: transparent;
+        border-radius: 3px;
+    }
+    &::-webkit-scrollbar-thumb {
+        background: #D9D9D9;
+        border-radius: 3px;
+    }
+}
+
+
+@mixin imgCover($padding) {
+    position: relative;
+    padding-bottom: $padding;
+    img{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+@mixin truncate($count){
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp:$count;
+    -webkit-box-orient: vertical;
+}
+
+@mixin grid100gap($gap) {
+    display: grid;
+    grid-template-columns: 100%;
+    gap: $gap;
+}
+
+@mixin center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin centerAbsolute{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+@mixin bgImgSize($size) {
+    background-size: $size auto;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+@mixin lastM($px){
+    &:not(:last-child){
+        margin: $px;
+    }
+}
+
+@mixin fullScreen {
+    width: calc(100% + 1.5em);
+    padding-left: .75em;
+    padding-right: .75em;
+    margin-left: -.75em;
+}
+
+@mixin sameNumWidth{
+    font-variant-numeric: tabular-nums;
+    -webkit-font-feature-settings: "tnum";
+    font-feature-settings: "tnum";
+}
+
+@mixin fullScroll {
+    @include fullScreen;
+    overflow-x: auto;
+    &::-webkit-scrollbar {
+        width: 0;
+        height: 0;
+    }
+}

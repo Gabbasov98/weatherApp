@@ -1,0 +1,9 @@
+@import 'fonts';
+@import 'reset';
+@import "mixins";
+@import 'global';
+@import 'index';
+.text20{
+  font-size: 1.25em;
+  line-height: 150%;
+}

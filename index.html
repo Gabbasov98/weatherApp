@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Weather App</title>
+</head>
+
+<body class="m-page">
+
+    <div class="layout _no-permission" style="background-image: url(img/cloudy.jpg);">
+
+<!--        <div class="permission">-->
+<!--            <div class="permission__title">Weather For You wants to know your current lacation!</div>-->
+<!--            <div class="permission__hint">-->
+<!--                <img src="img/marker.svg" alt="">-->
+<!--                <span>Permission to know your location</span>-->
+<!--            </div>-->
+<!--            <div class="permission__buttons">-->
+<!--                <button class="permission__btn"><span>Allow</span></button>-->
+<!--                <button class="permission__btn"><span>Block</span></button>-->
+<!--            </div>-->
+<!--        </div>-->
+
+        <div class="content">
+            <div class="search">
+                <input type="text" placeholder="Search..">
+                <button class="search__btn">
+                    <img src="img/search.svg" alt="">
+                </button>
+                <div class="search__variants"></div>
+            </div>
+            <div class="weather">
+                <div class="weather__city">
+                    Weather in <span class="_city"></span>
+                </div>
+                <div class="weather__degree">
+                    <span class="_temp">26</span> °C
+                </div>
+                <div class="weather__type">
+                    <img src="img/cloudy-icon.svg" alt="">
+                    <span class="text20 _description">Cloudy</span>
+                </div>
+                <div class="weather__props">
+                    <div class="weather__prop text20">
+                        Humidity: <span class="_humidity"></span> %
+                    </div>
+                    <div class="weather__prop text20">
+                        Wind Speed: <span class="_wind"></span> km/hr
+                    </div>
+                </div>
+            </div>
+            <div class="hint">
+                <span class="text20">You don't have permissision</span>
+            </div>
+        </div>
+
+    </div>
+
+
+<script src="js/scripts.js"></script>
+</body>
+
+</html>

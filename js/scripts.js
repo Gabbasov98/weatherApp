@@ -128,6 +128,8 @@ async function renderCities() {
             }
             getCityWeather(position)
             search.classList.remove("_active")
+            layout.classList.remove("_no-permission")
+            layout.classList.add("_has-permission")
         }
     })
 }

@@ -1,3 +1,5 @@
+const APPID = '6e0cbc6ba8ca28e2d697827e926593e3';
+
 window.addEventListener('DOMContentLoaded', () => {
 
     fix100vh();
@@ -29,7 +31,7 @@ function getLocation() {
 
 
 async function getCityWeather(position) {
-    let result = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&exclude=current&APPID=6e0cbc6ba8ca28e2d697827e926593e3`)
+    let result = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&exclude=current&APPID=${APPID}`)
     let data =  await result.json()
 
 
@@ -100,6 +102,7 @@ async function renderCities() {
         searchVariants.innerHTML = `
         <span class="text20">Cities not found</span>
         `
+        search.classList.add("_active")
         return
     }
 
